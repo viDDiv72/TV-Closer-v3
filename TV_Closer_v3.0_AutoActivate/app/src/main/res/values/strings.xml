@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TV Closer v2 No-Root</string>
+    <string name="status_device_owner">✓ Device Owner activo (modo óptimo)</string>
+    <string name="status_accessibility">✓ Accesibilidad activa (modo compatible)</string>
+    <string name="status_inactive">✗ No activado</string>
+    <string name="button_close">Cerrar aplicaciones</string>
+    <string name="button_activate">Activar ahora</string>
+    <string name="accessibility_hint">Abre Ajustes &gt; Accesibilidad y activa TV Closer</string>
+</resources>

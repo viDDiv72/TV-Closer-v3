@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="32dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TV Closer v2 No-Root"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="32dp" />
+
+    <TextView
+        android:id="@+id/status_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/status_inactive"
+        android:textSize="20sp"
+        android:textColor="#cccccc"
+        android:layout_marginBottom="48dp"
+        android:gravity="center" />
+
+    <Button
+        android:id="@+id/action_button"
+        android:layout_width="200dp"
+        android:layout_height="64dp"
+        android:text="@string/button_activate"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        android:background="#1976D2"
+        android:layout_marginBottom="48dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Device Owner: Requiere ADB (primera activación)\nAccesibilidad: Configurar desde Ajustes"
+        android:textSize="14sp"
+        android:textColor="#999999"
+        android:gravity="center" />
+
+</LinearLayout>
