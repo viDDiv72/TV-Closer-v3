@@ -1,6 +1,5 @@
 package com.vid.tvcloser2;
 
-import android.app.admin.DeviceAdminReceiver;
 import android.content.Context;
 import android.content.Intent;
 
@@ -17,7 +16,7 @@ public class DeviceAdminReceiver extends android.app.admin.DeviceAdminReceiver {
     }
 
     @Override
-    public CharSequence onDisablingFailed(Context context, Intent intent) {
+    public CharSequence onDisableRequested(Context context, Intent intent) {
         return "No se puede desactivar TV Closer";
     }
 }
