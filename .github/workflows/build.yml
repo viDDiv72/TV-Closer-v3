@@ -9,7 +9,12 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '11'
-      - run: cd TV_Closer_v3.0_AutoActivate && chmod +x gradlew && ./gradlew assembleDebug
+      - name: Install Gradle
+        run: apt-get update && apt-get install -y gradle
+      - name: Build APK
+        run: |
+          cd TV_Closer_v3.0_AutoActivate
+          gradle assembleDebug
       - uses: actions/upload-artifact@v4
         with:
           name: apk
