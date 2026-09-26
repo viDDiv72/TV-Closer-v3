@@ -9,7 +9,7 @@ jobs:
         with:
           java-version: '11'
       - run: cd TV_Closer_v3.0_AutoActivate && chmod +x gradlew && ./gradlew assembleDebug
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: apk
           path: TV_Closer_v3.0_AutoActivate/app/build/outputs/apk/debug/app-debug.apk
