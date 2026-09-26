@@ -7,4 +7,5 @@
     <string name="button_close">Cerrar aplicaciones</string>
     <string name="button_activate">Activar ahora</string>
     <string name="accessibility_hint">Abre Ajustes &gt; Accesibilidad y activa TV Closer</string>
+    <string name="accessibility_service_description">TV Closer Accessibility Service</string>
 </resources>
