@@ -87,21 +87,17 @@ public class AppCloserAccessibilityService extends AccessibilityService {
         return true;
     }
 
-    private String getHomePackage() {
-        Intent homeIntent = new Intent(Intent.ACTION_MAIN);
-        homeIntent.addCategory(Intent.CATEGORY_HOME);
-
-        List<ActivityManager.RunningTaskInfo> tasks;
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            tasks = activityManager.getTasks(1);
-            if (!tasks.isEmpty()) {
-                return tasks.get(0).topActivity.getPackageName();
-            }
-        }
-
-        // Fallback a launcher por defecto
-        return "com.android.launcher";
-    }
+   private String getHomePackage() {
+       Intent homeIntent = new Intent(Intent.ACTION_MAIN);
+       homeIntent.addCategory(Intent.CATEGORY_HOME);
+       android.content.pm.ResolveInfo resolveInfo = getPackageManager()
+               .resolveActivity(homeIntent, android.content.pm.PackageManager.MATCH_DEFAULT_ONLY);
+       if (resolveInfo != null && resolveInfo.activityInfo != null) {
+           return resolveInfo.activityInfo.packageName;
+       }
+       // Fallback a launcher por defecto
+       return "com.android.launcher";
+   }
 
     @Override
     protected void onServiceConnected() {
